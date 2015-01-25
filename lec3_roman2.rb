@@ -27,7 +27,7 @@ class Roman
     roman
   end
 end
-puts Roman.new(2)
-puts Roman.new(1)
+# puts Roman.new(2)
+# puts Roman.new(1)
 puts Roman.new(4)
 puts Roman.new(4999)
