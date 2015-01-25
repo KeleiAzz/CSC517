@@ -1,0 +1,39 @@
+class Person
+  attr_reader :name, :age, :occupation
+
+  def initialize(name, age, occupation)
+    @name, @age, @occupation = name, age, occupation
+  end
+
+  def mild_mannered?
+    true
+  end
+end
+jimmy = Person.new('Jimmy Olsen', 21, 'cub reporter')
+clark = Person.new('Clark Kent', 35, 'reporter')
+puts jimmy.mild_mannered?        # => true
+puts clark.mild_mannered?        # => true
+
+module SuperPowers
+  def fly
+    'Flying!'
+  end
+
+  def leap(what)
+     "Leaping #{what} in a single bound!"
+  end
+
+  def mild_mannered?
+     false
+  end
+
+  def superhero_name
+     'Superman'
+  end
+end
+
+clark.extend(SuperPowers)
+puts clark.superhero_name
+puts clark.fly
+puts clark.mild_mannered?
+puts jimmy.mild_mannered?

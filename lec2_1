@@ -1,0 +1,21 @@
+module Introspect
+  def kind
+    puts "This object is a #{self.class.name}"
+  end
+end
+class Animal
+  include Introspect
+  def initialize(name)
+    @name = name
+  end
+end
+class Car
+  include Introspect
+  def initialize(model)
+    @model = model
+  end
+end
+d = Animal.new("Cat")
+c = Car.new("Ferrari")
+d.kind # kind method is available through …
+c.kind # .. the mixin Introspect
