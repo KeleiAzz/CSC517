@@ -9,6 +9,8 @@ class Roman
     roman_string.to_s.upcase.split(//).reverse.inject(0) do
     |running_sum, digit|
       if digit_value = DIGITS[digit]
+        # puts digit_value
+        # puts prev && prev > digit_value
         if prev && prev > digit_value
           running_sum -= digit_value
         else
@@ -27,4 +29,4 @@ class Roman
 end
 
 # puts Roman.new.roman_to_integer("md")
-puts Roman.new.xix
+puts Roman.new.xlix
